@@ -41,11 +41,15 @@ function App() {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-        <ol key={`location${index+1}`}>
+        <ol>
             {cityList.filter((cout)=> cout.country === 
-            'India').map((city, index)=>{
+            'India' || cout.country === 
+            'Amsterdam' || cout.country === 
+            'New York' || cout.country === 
+            'Darjeeling' || cout.country === 
+            ' Lonavala').map((city, index)=>{
               return(
-                <li>{city.name}</li>
+                <li key={`location${index+1}`}>{city.name}</li>
               )
             })}
         </ol>
